@@ -1,3 +1,4 @@
+# NOTE: for versions >= 6 (for python 3.5+) see python3-jupyter_client.spec
 #
 # Conditional build:
 %bcond_without	doc	# Sphinx documentation
@@ -8,6 +9,7 @@
 Summary:	Reference implementation of the Jupyter protocol
 Summary(pl.UTF-8):	Referencyjna implementacja protokołu Jupyter
 Name:		python-jupyter_client
+# keep 5.x here for python2 support
 Version:	5.3.5
 Release:	1
 License:	BSD
