@@ -11,7 +11,7 @@ Summary(pl.UTF-8):	Referencyjna implementacja protokołu Jupyter
 Name:		python-jupyter_client
 # keep 5.x here for python2 support
 Version:	5.3.5
-Release:	1
+Release:	2
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/jupyter_client/
