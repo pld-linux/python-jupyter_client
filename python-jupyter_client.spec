@@ -4,7 +4,7 @@
 %bcond_without	doc	# Sphinx documentation
 %bcond_with	tests	# unit tests (disable for bootstrap: tests need ipykernel which requires jupyter_client; as of 5.3.3 two test_session tests fail)
 %bcond_without	python2 # CPython 2.x module
-%bcond_without	python3 # CPython 3.x module
+%bcond_with	python3 # CPython 3.x module
 
 Summary:	Reference implementation of the Jupyter protocol
 Summary(pl.UTF-8):	Referencyjna implementacja protokołu Jupyter
