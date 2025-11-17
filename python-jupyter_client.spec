@@ -2,7 +2,7 @@
 #
 # Conditional build:
 %bcond_without	doc	# Sphinx documentation
-%bcond_with	tests	# unit tests (disable for bootstrap: tests need ipykernel which requires jupyter_client; as of 5.3.3 two test_session tests fail)
+%bcond_with	tests	# unit tests (disable for bootstrap: tests need ipykernel which requires jupyter_client)
 %bcond_without	python2 # CPython 2.x module
 %bcond_with	python3 # CPython 3.x module
 
@@ -99,12 +99,12 @@ Dokumentacja API modułu Pythona jupyter_client.
 %prep
 %setup -q -n jupyter_client-%{version}
 
+# requires zmq.tests
+%{__rm} jupyter_client/tests/test_session.py
+
 %build
 %if %{with python2}
 %py_build %{?with_tests:test}
-# failing tests:
-# test_datetimes_msgpack (jupyter_client.tests.test_session.TestSession)
-# test_tracking (jupyter_client.tests.test_session.TestSession)
 %endif
 
 %if %{with python3}
